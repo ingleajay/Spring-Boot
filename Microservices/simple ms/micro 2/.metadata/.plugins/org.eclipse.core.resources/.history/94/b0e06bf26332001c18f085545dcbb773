@@ -1,0 +1,25 @@
+package com.sboot.services;
+
+import java.util.List;
+
+import com.sboot.model.Courses;
+
+public class CoursesServiceImpl implements CoursesService{
+
+	List<Courses> list = List.of(
+			
+	new Courses(1, "DSA" , "CS",101L),
+	new Courses(2, "CN" , "CS" , 101L),
+	new Courses(3, "COA" , "EXTC", 102L),
+	new Courses(4, "ED" , "MEC", 103L)
+	
+	);
+	
+	
+	@Override
+	public List<Courses> getCoursesOfStudent(Long stuid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

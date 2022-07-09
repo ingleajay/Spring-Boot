@@ -1,0 +1,22 @@
+package com.sboot.services;
+
+import java.util.List;
+
+import com.sboot.model.Student;
+
+
+public class StudentServiceImpl implements StudentService{
+
+	List<Student> list  = List.of(
+		new Student(101,"Ajay","1234123412");
+		new Student(102,"Sonali","1234129090");
+		new Student(103,"Vijay","1234127867");
+	);
+	
+	@Override
+	public Student getstudent(long id) {
+		// TODO Auto-generated method stub
+		return list.stream().filter(student -> student.getId()).findAny().orElse(null);
+	}
+
+}

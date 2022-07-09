@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Condition</title>
+</head>
+<body>
+<h1>use is <span 
+th:style="${isActive} ? 'color:red': 'color:blue' "
+th:text="${isActive} ? 'Active' : 'Inactive'"></span></h1>
+
+<h1 th:if="${gender}=='M' ">Male</h1>
+
+<div th:switch = "${#lists.size(mlist)}">
+	<p th:case="'0'">zero ele </p>
+	<p th:case="'1'">first ele </p>
+	<p th:case="*">all ele </p>
+
+</div>
+</body>
+</html>

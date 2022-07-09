@@ -1,0 +1,6 @@
+package com.sboot.services;
+
+public interface CoursesService {
+
+	
+}

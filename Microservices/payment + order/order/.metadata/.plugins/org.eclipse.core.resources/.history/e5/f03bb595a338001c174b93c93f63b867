@@ -1,0 +1,15 @@
+package com.codeouter.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name="ORDER_TB")
+public class Order {
+
+	private int id;
+	private String name;
+	private int qty;
+	private double price;
+}

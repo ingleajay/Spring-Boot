@@ -1,0 +1,28 @@
+package com.codeouter.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.codeouter.helper.TransactionRequest;
+import com.codeouter.model.Order;
+import com.codeouter.model.Payment;
+import com.codeouter.repository.OrderRepository;
+
+@Service
+public class OrderService {
+
+	@Autowired
+	private OrderRepository orderRepository;
+	
+	public Order saveorder(TransactionRequest transactionRequest) {
+		Order order = transactionRequest.getOrder();
+		Payment payment = transactionRequest.getPayment();
+		payment.setOrderid(order.getId());
+		payment.setAmount(order.getPrice());
+		
+		// rest call
+		
+		
+		return orderRepository.save(order);
+	}
+}

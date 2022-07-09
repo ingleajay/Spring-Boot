@@ -1,0 +1,5 @@
+package com.sboot.controller;
+
+public class StudentController {
+
+}

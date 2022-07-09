@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Services</title>
+
+</head>
+<body>
+	<p>Host Tag : services</p>
+	
+	<!-- 
+	replace = it replace host tag to fragment tag and changes content
+	include = it keeps host tag but changes content
+	insert = it keep fragment tag inside host tage and changes conent
+	-->
+	<!--  dynamic value from controller -> host tag -> fragment tag -->
+	<footer th:replace="footer::footer1(${title})" id="hostTag">
+		<h1>All services here ...</h1>
+	</footer>
+	<section>new extend from here....</section>
+</body>
+</html>
