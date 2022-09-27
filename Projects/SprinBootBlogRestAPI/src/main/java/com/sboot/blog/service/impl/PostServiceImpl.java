@@ -45,7 +45,8 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostDto createPost(PostDto postDto, Long userId) {
 
-        // we have to send response as DTO not entity so first convert DTO - entity then entity - DTO as response
+        // we have to send response as DTO not entity so first convert DTO
+    	//  - entity then entity - DTO as response
 
         // Convert DTO to entity
         Post post = mapDTOToEntity(postDto);
